@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Countdown Timer Script
+        function startCountdown() {
+            const eventDate = new Date("August 15, 2025 09:00:00").getTime();
+            const timer = setInterval(function () {
+                const now = new Date().getTime();
+                const timeLeft = eventDate - now;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    document.getElementById("countdown").innerHTML = "The event has started!";
+                    return;
+                }
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML =
+                    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            }, 1000);
+        }
+
+        window.onload = startCountdown;
+    </script>
+</head>
+<body>
+    <!-- Countdown Timer -->
+    <div id="countdown" style="text-align: center; font-size: 1.5em; margin: 20px 0;">
+        Loading countdown...
+    </div>
+
+    <header>
+        <h1>Magaliesburg Joy Carnival</h1>
+        <p>Join us for a day of fun, music, food, and festivities!</p>
+        <p><strong>Date:</strong> 15th August 2025</p>
+        <p><strong>Time:</strong> 09:00 AM to 05:30 PM</p>
+        <p><strong>Location:</strong> Magaliesburg, Mogale City Municipality, South Africa</p>
+        <p><a href="#activities">Explore Activities</a></p>
+    </header>
+    <main>
+        <!-- Activities Section -->
+        <article id="activities">
+            <h2>Activities</h2>
+            <ul type="none">
+                <li>🎵 Live Music Performances</li>
+                <li>🍔 Food Stalls</li>
+                <li>🎨 Art and Craft Exhibitions</li>
+                <li>🎠 Children's Play Area</li>
+                <li>🏆 Outdoor Games and Competitions</li>
+            </ul>
+            <p>Join us for a day filled with joy and excitement!</p>
+        </article>
+
+        <!-- Tickets Section -->
+        <article id="tickets">
+            <h2>Tickets</h2>
+            <p>Tickets are available for purchase online or at the venue.</p>
+            <p><strong>Price:</strong> R150 per person</p>
+            <p><a href="https://www.magaliesburgcarnival.co.za" target="_blank">Buy Tickets</a></p>
+        </article>
+
+        <!-- Past Activities Section -->
+        <article class="container">
+            <h2>Past Activities</h2>
+            <p>The "Past Activities" section highlights the vibrant and diverse experiences from previous events at the Magaliesburg Joy Carnival. Attendees enjoyed live music performances, thrilling carnival rides, delicious food festivals, captivating art exhibitions, and entertaining street performances. The day concluded with a spectacular fireworks show, leaving lasting memories for everyone. These activities showcase the carnival's commitment to providing fun and excitement for all ages.</p>
+            <section class="cell">🎤 Live performances
+                <img src="Live perfomance carnival.png" alt="Live perfomance" width="300" height="200">
+            </section>
+            <section class="cell">🎡 Carnival Rides
+                <img src="children games.jpg" alt="Carnival rides" width="300" height="200">
+                <img src="outdoor games.jpg" alt="carnival rides" width="300" height="200">
+                <img src="rides.jpg" alt="carnival rides" width="300" height="200">
+            </section>
+            <section class="cell">🍕 Food Festival
+                <img src="food stalls.jpg" alt="Food festival" width="300" height="300">
+                <img src="stalls.jpg" alt="food festival" width="300" height="200">
+            </section>
+            <section class="cell">🎨 Art Exhibitions
+                <img src="art exhibition.png" alt="Art exhibition" width="300" height="200">
+                <img src="art.jpg" alt="art exhibition" width="300" height="200">
+            </section>
+            <section class="cell">🎭 Street performances
+                <img src="street.jpg" alt="street performances" width="300" height="200">
+                <img src="perfomance.jpg" alt="street performances" width="300" height="200">
+            </section>
+            <section class="cell">🎆 Fireworks Show
+                <img src="2 f.jpg" alt="fireworks show" width="300" height="200">
+                <img src="1 f.webp" alt="fireworks show" width="300" height="200">
+            </section>
+           
+        </article>
+
+        <!-- Event Rules Section -->
+        <section id="rules">
+            <h2>Event Rules</h2>
+            <ul>
+                <li>No outside food or drinks allowed.</li>
+                <li>Children under 12 must be accompanied by an adult.</li>
+                <li>Pets are not allowed, except for service animals.</li>
+                <li>Follow all safety instructions provided by event staff.</li>
+                <li>Respect other attendees and event property.</li>
+                <li>Smoking is only permitted in designated areas.</li>
+                <li>Tickets are non-refundable.</li>
+            </ul>
+        </section>
+
+        <!-- Artists Section -->
+        <section id="artists">
+            <h2>Artists Performing</h2>
+            <p>We are excited to announce the following artists will be performing at the event:</p>
+            <ul type="none">
+                <li>
+                    
+                    <span>🎤 SHANDESH</span>
+                </li>
+                <li>
+                   
+                    <span>🎧 DJ KABZA DE SMALL</span>
+                </li>
+                <li>
+                    
+                    <span>🎧 DJ MAPHORISA</span>
+                </li>
+                <li>
+                   
+                    <span>🎙️ ZOE MODIGA</span>
+                </li>
+                <li>
+                   
+                    <span>🎙️ SPARTZ</span>
+                </li>
+            </ul>
+            <div class="slider" >
+            <img src="shandesh image.jpg" alt="SHANDESH" class="artist-image" width="300" height="300">
+            <img src="Kabza de small.jpg" alt="DJ KABZA DE SMALL" class="artist-image" width="300" height="300">
+            <img src="maphorisa.jpg" alt="DJ MAPHORISA" class="artist-image" width="300" height="300">
+            <img src="Zoe modiga.jpg" alt="ZOE MODIGA" class="artist-image" width="300" height="300">
+            <img src="Spartz.jpg" alt="SPARTZ" class="artist-image" width="300" height="300">
+          </div>
+        </section>
+
+        <!-- Google Maps Section -->
+        <section id="location">
+            <h2>Event Location</h2>
+            <p>Find us at Magaliesburg, Mogale City Municipality, South Africa:</p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.1234567890123!2d27.555555!3d-25.555555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb1234567890abc%3A0x1234567890abcdef!2sMagaliesburg!5e0!3m2!1sen!2sza!4v1234567890123" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Magaliesburg Joy Carnival. All rights reserved.</p>
+        <p>Follow us on social media:</p>
+        <p>
+            <a href="https://www.facebook.com/magaliesburgjoycarnival" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/magaliesburgjoycarnival" target="_blank">Instagram</a> |
+            <a href="https://www.twitter.com/magaliesburgjoycarnival" target="_blank">Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>
